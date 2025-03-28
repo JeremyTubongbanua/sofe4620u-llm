@@ -224,7 +224,7 @@ class GoogleMapsSearchTool(Tool):
                 if loc:
                     location_info = f"Based on your location in {loc['city']}, {loc['state']}, {loc['country']}:\n\n"
             
-            return f"{location_info}{''.join(results)}"
+            return f"{location_info}{'\n'.join(results)}"
         except Exception as e:
             return f"Failed to search Google Maps: {str(e)}"
 
